@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block body %}<h1>Команды</h1><a class="btn" href="/teams/create">＋ Создать команду</a><div class="grid">{% for t in teams %}<a href="/teams/{{t.id}}"><b>{{t.name}}</b><small>Капитан {{t.captain}} · {{t.server}} · Ищет {{t.role_needed}}</small></a>{% else %}<p class="muted">Команд пока нет.</p>{% endfor %}</div>{% endblock %}
