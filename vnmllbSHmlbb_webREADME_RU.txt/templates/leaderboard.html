@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block body %}<h1>Топ игроков</h1>{% for p in players %}<article class="rank"><b>#{{loop.index}} {{p.game_nick or p.username}}</b><small>{{p.rank}} · {{p.role}} · {{p.server}}</small></article>{% else %}<p class="muted">Пока нет игроков.</p>{% endfor %}{% endblock %}
